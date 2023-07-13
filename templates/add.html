@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">{{name}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add">Add Task</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/completed">Completed Tasks</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock head %}
+
+{% block title %}
+Add Task
+{% endblock title %}
+
+{% block body %}
+
+</br></br></br></br></br>
+<div align="center">
+    <div align="center" class="border">
+        <div class="header">
+
+            <h2 class="word">Add a Task</h2>
+        </div></br>
+    </div>
+</div>
+
+<div align="center" class="border">
+    <div class="w-50 p-3">
+        <form action="/add" method="post">
+            <div class="row mb-3">
+                <label for="task" class="col-sm-2 col-form-label">Task</label>
+                <div class="col-sm-10">
+                    <input type="text" autofocus class="form-control" placeholder="Enter task description here"
+                        id="task" name="task">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Task</button>
+    </div>
+</div>
+</form>
+
+
+{% endblock body %}
